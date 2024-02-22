@@ -1,0 +1,28 @@
+<section class="container mt-3">
+    <h4>Formulario de registro</h4>
+    <hr>
+    <!-- Importar la libreria ReactiveFormsModule -->
+    <form [formGroup]="registerStudent" (ngSubmit)="getDataForm()">
+        <div>
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name" formControlName="nombre">
+        </div>
+
+        <div>
+            <label for="age" class="form-label">Edad</label>
+            <input type="number" class="form-control" id="age" formControlName="edad">
+        </div>
+
+        <div>
+            <label for="email" class="form-label">Email</label>
+            <input type="text" class="form-control" id="email" formControlName="email">
+        </div>
+
+        <div>
+            <label for="course" class="form-label">Curso</label>
+            <input type="text" class="form-control" id="course" formControlName="curso">
+        </div>
+    
+    <input type="submit" class="btn btn-danger btn-sm mt-3" value="Guardar">
+    </form>
+</section>

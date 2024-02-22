@@ -1,0 +1,16 @@
+<section class="container mt-5">
+    <h2>Mis estudiantes</h2>
+    <!-- Un componente form template filters -->
+    <app-filters (cursoSeleccionado)="getCourse($event)"></app-filters>
+    <hr>
+    <div class="row g-2">
+        @for(alumno of alumnos; track alumno.id) {
+        <article class="col-12 col-md-6 col-lg-4">
+            <app-student-card [miAlumno]="alumno"></app-student-card> <!-- Le paso el input miAlumno con la informacion de un alumno -->
+        </article>
+        <!--Si el array viene vacio-->
+        }@empty {
+
+        }
+    </div>
+</section>

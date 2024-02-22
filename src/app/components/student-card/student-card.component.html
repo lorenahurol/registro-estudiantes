@@ -1,0 +1,8 @@
+<div class="card shadow">
+    <h3 class="card-header text-center">{{miAlumno.nombre}}</h3>
+    <ul class="list-group m-1 p-2">
+        <li class="list-group">Edad: {{miAlumno.edad}}</li>
+        <li class="list-group">Email: <a [href]=" 'mailto:' + miAlumno.email" class="text-danger">{{miAlumno.email}}</a></li>
+        <li class="list-group-item bg-dark text-white mt-2">{{miAlumno.curso}}</li>
+    </ul>
+</div>
